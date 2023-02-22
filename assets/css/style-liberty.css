@@ -14282,15 +14282,6 @@ nav ul li a:hover {
 
 .carousel-button {
     align-items: center;
-    position: absolute;
-    /* top: 50%; 
-    transform: translateY(-50%);
-    background: none;
-    border: 2px;
-    color: #cf6969;
-    font-size: 2rem;
-    cursor: pointer;
-    outline: none; */
 }
   .carousel-button--prev {
     left: 0;
