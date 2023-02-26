@@ -20,11 +20,8 @@
 
 <body>
 
-
     <link rel="stylesheet" href="assests/css/font-awesome.min.css">
     <!-- New toolbar-->
-
-
 
     <!--header-->
     <header id="site-header" class="fixed-top">
@@ -42,8 +39,6 @@
                     </a>
                 </h1>
                 <a class="navbar-brand" href="index.html" style="font-size: 20px; color: coral; position: absolute; margin-top: 55px; margin-left: 80px;">Advisors For Wealth Creation</a>
-
-
 
                 <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
@@ -78,9 +73,6 @@
                                 <a class="dropdown-item @@ps__active disabled" style="color: brown;">Our Expertise Service</a>
                                 <a class="dropdown-item @@ps__active" href="individual.html">Advicing for Career Development</a>
                                 <a class="dropdown-item @@ps__active" href="individual.html">Advicing for Wealth Creation</a>
-
-
-
                             </div>
 
                         </li>
@@ -133,7 +125,7 @@
         </div>
     </section> -->
 
-    <!-- contacts -->
+    <!-- contacts  form -->
     <section class="w3l-contact-7 pt-5" id="contact">
         <div class="contacts-9 pt-lg-5 pt-md-4">
             <div class="container">
@@ -143,21 +135,21 @@
                             <div class="contact-form">
                                 <h5 class="mb-2">Get in touch</h5>
 
-                                <form action="phpfiles/customercontact.php" method="post" class="">
+                                <form id="myForm" onsubmit="formToWhatsApp()">
                                     <div class="form-grid">
                                         <div class="input-field">
-                                            <input type="text" name="name" id="w3lName" placeholder="Your Name" required="">
+                                            <input type="text" name="name" id="Name" placeholder="Your Name" required="">
                                         </div>
                                         <div class="input-field">
-                                            <input type="email" name="mail" id="w3lSender" placeholder="Mail" required="">
+                                            <input type="email" name="mail" id="Mail" placeholder="E-Mail" required="">
                                         </div>
                                         <div class="input-field">
-                                            <input type="text" name="phone" id="w3lSender" placeholder="Phone" required="">
+                                            <input type="text" name="phone" id="Phone" placeholder="Phone" required="">
                                         </div>
                                         <div class="input-field">
-                                            <input type="text" name="location" id="w3lSender" placeholder="Wanted Location" required="">
+                                            <input type="text" name="location" id="Location" placeholder="Wanted Location" required="">
                                         </div>
-                                        <div class="input-field">
+                                        <!-- <div class="input-field">
                                             <label for="sel3">Property Type</label>
                                             <select class="form-control" id="sel3" name="sel3" style="line-height: 1.0;">
                                                 <option>Individual plots</option>               
@@ -166,12 +158,11 @@
                                                 <option>Houses</option>
                                                 <option>Apartments</option>
                                                 <option>Villas</option>
-                                                <option>Commercial</option>
-                                                                    
+                                                <option>Commercial</option>               
                                             </select>
-                                        </div>
+                                        </div> -->
 
-                                        <div class="input-field">
+                                        <!-- <div class="input-field">
                                             <label for="sel4" name="qualification">Price Range</label>
                                             <select class="form-control" id="sel4" name="sel4" style="line-height: 1.0;">
                                                 <option disabled selected>Minimum Price</option>               
@@ -180,9 +171,9 @@
                                                 <option>15,00,000</option>
                                                 <option>20,00,000</option>
                                                 <option>25,00,000</option>
-                                                <option>30,00,000</option>
-                                                                    
+                                                <option>30,00,000</option>                             
                                             </select>
+                                        
                                             <select class="form-control" id="sel5" name="sel5" style="line-height: 1.0; margin-top: 15px; ">
                                                 <option disabled selected>Maximum Price</option>               
                                                 <option>15,00,000</option>               
@@ -194,41 +185,19 @@
                                                 <option>50,00,000</option>
                                                 <option>60,00,000</option>
                                                 <option>70,00,000</option>
-                                                
                                                 <option>80,00,000</option>
-                                                
                                                 <option>90,00,000</option>
-                                                
                                                 <option>100,00,000</option>
                                                 <option>ABOVE 100,00,000</option>
-                                                
-                                                                    
                                             </select>
-                                        </div>
-
-
-                                        <div class="input-field">
+                                        </div> -->
+                                        <!-- <div class="input-field">
                                             <textarea name="desc" id="nder" placeholder="Description" required=""></textarea>
-                                        </div>
-
-
-
-
-
+                                        </div> -->
                                     </div>
-
                                     <button type="submit" class="btn btn-primary btn-style mt-3" name="submit">Submit</button>
                                 </form>
-
-
-
-
-
-
-
                             </div>
-
-
 
                         </div>
 
@@ -240,8 +209,6 @@
                             <h5 class="mt-4 pt-lg-3">Phone informatiom</h5>
                             <p><span class="fa fa-mobile"></span> <strong>Phone :</strong>
                                 <a href="tel:+91 7416644667">+91 7416644667</a></p>
-
-                            
                             <p> <span class="fa fa-envelope"></span> <strong>Email :</strong>
                                 <a href="mailto:keerthirealtors9@gmail.com"> keerthirealtors9@gmail.com</a></p>
                         </address>
@@ -267,12 +234,8 @@
                             <ul>
                                 <li>
                                     <a href="index.html" style="font-family: Georgia, 'Times New Roman', Times, serif;">Home</a>
-
                                 </li>
-
-
                                 <li>
-
                                     <a href="about.html" style="font-family: Georgia, 'Times New Roman', Times, serif;">About Us</a>
 
                                 </li>
@@ -291,11 +254,7 @@
                                 <li>
                                     <a href="customer.html" style="font-family: Georgia, 'Times New Roman', Times, serif;">Contact Us</a>
                                 </li>
-
                             </ul>
-
-
-
                         </div>
                         <div class="column">
                             <a href="#url" class="link"><span class="fa fa-phone"></span></a>
@@ -317,11 +276,6 @@
                                 <li><a href="https://youtube.com/c/SIVARAMS9" class="instagram" target="_blank"><span class="fa fa-youtube-play"></span></a></li>
                             </ul>
                         </div>
-
-
-
-
-
                     </div>
 
                     <div class="whatsapp">
@@ -369,7 +323,7 @@
     <!-- jQuery and Bootstrap JS -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
 
-    <script src="assets/js/theme-change.js"></script>
+    <!-- <script src="assets/js/theme-change.js"></script> -->
     <!-- theme switch js (light and dark)-->
 
     <!-- stats number counter-->
@@ -414,6 +368,56 @@
                 }
             })
         })
+
+        function formToWhatsApp() {
+            // const form = document.getElementById("myForm");
+            // form.addEventListener("submit", (event) => {
+            //     event.preventDefault(); // Prevent form submission
+                var name = document.getElementById("Name").value;
+                var email = document.getElementById("Mail").value;
+                var phone = document.getElementById("Phone").value;
+                var location = document.getElementById("Location").value;
+                // email.addEventListener("onChange", (event) => {
+                //     console.log(event.target.value)
+                // })
+                var url = "https://api.whatsapp.com/send?phone=916284242142?text=" +
+                        "Name: " + name + "%0a" + 
+                        "Phone: " + phone + "%0a" + 
+                        "Email: " + email + "%0a" +
+                        "Location: " + location;
+                
+                    console.log("Name:", name);
+                    console.log("Email:", email);
+                    console.log(url)
+            //     You can then use the data retrieved from the form for further processing
+            // });
+            }
+
+        
+        
+        //     function sendToWhatsApp(formData) {
+        //     fetch('https://api.whatsapp.com/send', {
+        //         method: 'POST',
+        //         headers: {
+        //         'Content-Type': 'application/x-www-form-urlencoded'
+        //         },
+        //         body: new URLSearchParams({
+        //         phone: '916284242142', // replace with recipient's phone number
+        //         text: `Name is: ${name} and Email: ${email}` // replace with formatted message text
+        //         }).then((res) => console.log(res, "api return back"))
+        //     });
+        //     }
+        //     sendToWhatsApp(formData);
+        //  }
+        // const email = document.querySelectorAll(".Mail").value;
+                // email.addEventListener("input", (event) => {
+                //     console.log(event.target.value)
+
+                // })
+                
+                // const emailOnchange = (e) => {
+                    // console.log(email); 
+                // }
     </script>
     <!-- //script for blog post slider -->
 
@@ -518,9 +522,6 @@
 
     <!-- bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
-
-
-
 
     <div id="v-w3layouts"></div>
     <script>
