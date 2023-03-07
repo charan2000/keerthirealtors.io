@@ -13,6 +13,9 @@
     <!-- google fonts -->
     <link href="//fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-liberty.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -20,10 +23,10 @@
 
 <body>
 
-    <link rel="stylesheet" href="assests/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="assests/css/font-awesome.min.css"> -->
     <!-- New toolbar-->
 
-    <!--header-->
+    <!--header-->`
     <header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg stroke px-0">
@@ -100,6 +103,27 @@
 
                 </div>
 
+                <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand" href="">tindog</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#footer">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#cta">Download</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav> -->
+
                 <!-- toggle switch for light and dark theme -->
 
                 <!-- //toggle switch for light and dark theme -->
@@ -135,7 +159,7 @@
                             <div class="contact-form">
                                 <h5 class="mb-2">Get in touch</h5>
 
-                                <form id="myForm" onsubmit="formToWhatsApp()">
+                                <form>
                                     <div class="form-grid">
                                         <div class="input-field">
                                             <input type="text" name="name" id="Name" placeholder="Your Name" required="">
@@ -287,7 +311,7 @@
 
                     <div class="d-grid grid-col-3 grids-content1 bottom-border">
                         <div class="columns copyright-grid align-self">
-                            <p class="copy-footer-29">©2006 Keerthi Realtors. All rights reserved | Designed by <a href="https://roheetthdigitals.com">Roheetth Digitals</a></p>
+                            <p class="copy-footer-29">©2006 Keerthi Realtors. All rights reserved | Designed by Charan Bhavisetti</a></p>
                         </div>
                     </div>
                 </div>
@@ -310,7 +334,6 @@
                     document.getElementById("movetop").style.display = "none";
                 }
             }
-
             // When the user clicks on the button, scroll to the top of the document
             function topFunction() {
                 document.body.scrollTop = 0;
@@ -367,31 +390,49 @@
                     }
                 }
             })
-        })
-
-        function formToWhatsApp() {
-            // const form = document.getElementById("myForm");
-            // form.addEventListener("submit", (event) => {
-            //     event.preventDefault(); // Prevent form submission
+        }) 
+            
+            function formToWhatsapp() {
                 var name = document.getElementById("Name").value;
-                var email = document.getElementById("Mail").value;
                 var phone = document.getElementById("Phone").value;
+                var email = document.getElementById("Mail").value;
                 var location = document.getElementById("Location").value;
-                // email.addEventListener("onChange", (event) => {
-                //     console.log(event.target.value)
-                // })
-                var url = "https://api.whatsapp.com/send?phone=916284242142?text=" +
-                        "Name: " + name + "%0a" + 
-                        "Phone: " + phone + "%0a" + 
-                        "Email: " + email + "%0a" +
-                        "Location: " + location;
-                
-                    console.log("Name:", name);
-                    console.log("Email:", email);
-                    console.log(url)
-            //     You can then use the data retrieved from the form for further processing
-            // });
+                console.log(name, phone, email, location)
+                url = "https://wa.me/916284242142?text=" + 
+                        "Name: "+name+"%0a"+
+                        "PhoneNo.: " + phone + "%0a" + 
+                        "E-Mail: " + email + "%0a" + 
+                        "Location Needed: " + location;
+                window.open("https://api.whatsapp.com/send?phone=917416644667", '_blank').focus();
             }
+            
+            // document.getElementById('myForm').addEventListener('submit', handleSubmit);
+            // // const form = document.getElementById("myForm");
+            // // form.addEventListener("submit", (event) => {
+            // //     event.preventDefault(); // Prevent form submission
+            //     function handleSubmit(event) {
+            //         event.preventDefault(); // prevent default form submission behavior
+            //         const formData = new FormData(event.target.value); // extract form data
+            //         const formDataObject = Object.fromEntries(formData.entries()); // convert form data to an object
+            //         // call function to send data to WhatsApp
+            //         sendToWhatsApp(formDataObject);
+            //         }
+
+            // function sendToWhatsApp(formData) {
+
+            //     fetch('https://api.whatsapp.com/send', {
+            //     method: 'POST',
+            //     headers: {
+            //     'Content-Type': 'application/x-www-form-urlencoded'
+            //     },
+            //     body: new URLSearchParams({
+            //     phone: '916284242142', // replace with recipient's phone number
+            //     text: `Form data: ${JSON.stringify(formData)}`
+            //     // text: `Name: ${name}, Phone No.: ${phone}, E-mail: ${email}, Req in: ${location}` // replace with formatted message text
+            //     })
+            //     });
+
+            // }
 
         
         
@@ -521,10 +562,10 @@
     <!-- //MENU-JS -->
 
     <!-- bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.min.js"></script> -->
 
     <div id="v-w3layouts"></div>
-    <script>
+    <!-- <script>
         (function(v, d, o, ai) {
             ai = d.createElement('script');
             ai.defer = true;
@@ -532,7 +573,7 @@
             ai.src = v.location.protocol + o;
             d.head.appendChild(ai);
         })(window, document, '//a.vdo.ai/core/v-w3layouts/vdo.ai.js');
-    </script>
+    </script> -->
 </body>
 
 </html>
