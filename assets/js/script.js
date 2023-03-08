@@ -1,3 +1,27 @@
+
+// To send data from Form in contact us page and send it to Whatsapp:
+function formToWhatsapp() {
+    var form = document.getElementById("myForm");
+    var name = form.elements["Name"].value;
+    var phone = form.elements["Phone"].value;
+    var email = form.elements["Mail"].value;
+    var location = form.elements["Location"].value;
+    var propType = form.elements["typeProperty"].value;
+    console.log(name, phone, email, location)
+    url = "https://wa.me/917416644667?text=" + 
+            "Name: "+name+"%0a"+
+            "PhoneNo.: " + phone + "%0a" + 
+            "E-Mail: " + email + "%0a" + 
+            "Location searching: " + location + "%0a"+
+            "Property-type: " + propType;
+    window.open(url, '_blank').focus();
+}
+
+
+
+
+
+
 // // Ion.RangeSlider
 // // version 2.1.7 Build: 371
 // // Â© Denis Ineshin, 2017

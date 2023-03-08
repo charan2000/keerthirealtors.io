@@ -159,7 +159,7 @@
                             <div class="contact-form">
                                 <h5 class="mb-2">Get in touch</h5>
 
-                                <form>
+                                <form id="myForm" onsubmit="formToWhatsapp()">
                                     <div class="form-grid">
                                         <div class="input-field">
                                             <input type="text" name="name" id="Name" placeholder="Your Name" required="">
@@ -173,9 +173,9 @@
                                         <div class="input-field">
                                             <input type="text" name="location" id="Location" placeholder="Wanted Location" required="">
                                         </div>
-                                        <!-- <div class="input-field">
+                                        <div class="input-field">
                                             <label for="sel3">Property Type</label>
-                                            <select class="form-control" id="sel3" name="sel3" style="line-height: 1.0;">
+                                            <select class="form-control" id="typeProperty" name="typeProperty" style="line-height: 1.0;">
                                                 <option>Individual plots</option>               
                                                 <option>Residential plots</option>               
                                                 <option>Commertial Plots</option>
@@ -184,11 +184,11 @@
                                                 <option>Villas</option>
                                                 <option>Commercial</option>               
                                             </select>
-                                        </div> -->
+                                        </div>
 
-                                        <!-- <div class="input-field">
+                                        <div class="input-field">
                                             <label for="sel4" name="qualification">Price Range</label>
-                                            <select class="form-control" id="sel4" name="sel4" style="line-height: 1.0;">
+                                            <select class="form-control" id="minPrice" name="minPrice" style="line-height: 1.0;">
                                                 <option disabled selected>Minimum Price</option>               
                                                 <option>5,00,000</option>               
                                                 <option>10,00,000</option>
@@ -198,7 +198,7 @@
                                                 <option>30,00,000</option>                             
                                             </select>
                                         
-                                            <select class="form-control" id="sel5" name="sel5" style="line-height: 1.0; margin-top: 15px; ">
+                                            <select class="form-control" id="maxPrice" name="maxPrice" style="line-height: 1.0; margin-top: 15px; ">
                                                 <option disabled selected>Maximum Price</option>               
                                                 <option>15,00,000</option>               
                                                 <option>20,00,000</option>
@@ -214,12 +214,12 @@
                                                 <option>100,00,000</option>
                                                 <option>ABOVE 100,00,000</option>
                                             </select>
-                                        </div> -->
+                                        </div>
                                         <!-- <div class="input-field">
                                             <textarea name="desc" id="nder" placeholder="Description" required=""></textarea>
                                         </div> -->
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-style mt-3" name="submit">Submit</button>
+                                    <button type="submit" class="btn btn-outline-secondary btn-style mt-3" name="submit" >Submit</button>
                                 </form>
                             </div>
 
@@ -347,7 +347,6 @@
     <script src="assets/js/jquery-3.3.1.min.js"></script>
 
     <!-- <script src="assets/js/theme-change.js"></script> -->
-    <!-- theme switch js (light and dark)-->
 
     <!-- stats number counter-->
     <script src="assets/js/jquery.waypoints.min.js"></script>
@@ -357,133 +356,27 @@
     </script>
     <!-- //stats number counter -->
 
-    <!-- owlcarousel -->
-    <script src="assets/js/owl.carousel.js"></script>
-    <!-- script for blog post slider -->
+    <!-- <script src="assets/js/script.js"></script> -->
+
     <script>
-        $(document).ready(function() {
-            $('.owl-blog').owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: false,
-                responsiveClass: true,
-                autoplay: false,
-                autoplayTimeout: 5000,
-                autoplaySpeed: 1000,
-                autoplayHoverPause: false,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: true
-                    },
-                    480: {
-                        items: 1,
-                        nav: true
-                    },
-                    700: {
-                        items: 1,
-                        nav: true
-                    },
-                    1090: {
-                        items: 1,
-                        nav: true
-                    }
-                }
-            })
-        }) 
-            
-            function formToWhatsapp() {
-                var name = document.getElementById("Name").value;
-                var phone = document.getElementById("Phone").value;
-                var email = document.getElementById("Mail").value;
-                var location = document.getElementById("Location").value;
+        function formToWhatsapp() {
+                var form = document.getElementById("myForm");
+                var name = form.elements["Name"].value;
+                var phone = form.elements["Phone"].value;
+                var email = form.elements["Mail"].value;
+                var location = form.elements["Location"].value;
+                var propType = form.elements["typeProperty"].value;
                 console.log(name, phone, email, location)
-                url = "https://wa.me/916284242142?text=" + 
+                url = "https://wa.me/917416644667?text=" + 
                         "Name: "+name+"%0a"+
                         "PhoneNo.: " + phone + "%0a" + 
                         "E-Mail: " + email + "%0a" + 
-                        "Location Needed: " + location;
-                window.open("https://api.whatsapp.com/send?phone=917416644667", '_blank').focus();
+                        "Location searching: " + location + "%0a"+
+                        "Property-type: " + propType;
+                window.open(url, '_blank').focus();
             }
-            
-            // document.getElementById('myForm').addEventListener('submit', handleSubmit);
-            // // const form = document.getElementById("myForm");
-            // // form.addEventListener("submit", (event) => {
-            // //     event.preventDefault(); // Prevent form submission
-            //     function handleSubmit(event) {
-            //         event.preventDefault(); // prevent default form submission behavior
-            //         const formData = new FormData(event.target.value); // extract form data
-            //         const formDataObject = Object.fromEntries(formData.entries()); // convert form data to an object
-            //         // call function to send data to WhatsApp
-            //         sendToWhatsApp(formDataObject);
-            //         }
+    </script> 
 
-            // function sendToWhatsApp(formData) {
-
-            //     fetch('https://api.whatsapp.com/send', {
-            //     method: 'POST',
-            //     headers: {
-            //     'Content-Type': 'application/x-www-form-urlencoded'
-            //     },
-            //     body: new URLSearchParams({
-            //     phone: '916284242142', // replace with recipient's phone number
-            //     text: `Form data: ${JSON.stringify(formData)}`
-            //     // text: `Name: ${name}, Phone No.: ${phone}, E-mail: ${email}, Req in: ${location}` // replace with formatted message text
-            //     })
-            //     });
-
-            // }
-
-        
-        
-        //     function sendToWhatsApp(formData) {
-        //     fetch('https://api.whatsapp.com/send', {
-        //         method: 'POST',
-        //         headers: {
-        //         'Content-Type': 'application/x-www-form-urlencoded'
-        //         },
-        //         body: new URLSearchParams({
-        //         phone: '916284242142', // replace with recipient's phone number
-        //         text: `Name is: ${name} and Email: ${email}` // replace with formatted message text
-        //         }).then((res) => console.log(res, "api return back"))
-        //     });
-        //     }
-        //     sendToWhatsApp(formData);
-        //  }
-        // const email = document.querySelectorAll(".Mail").value;
-                // email.addEventListener("input", (event) => {
-                //     console.log(event.target.value)
-
-                // })
-                
-                // const emailOnchange = (e) => {
-                    // console.log(email); 
-                // }
-    </script>
-    <!-- //script for blog post slider -->
-
-    <!-- script for tesimonials carousel slider -->
-    <script>
-        $(document).ready(function() {
-            $("#owl-demo1").owlCarousel({
-                loop: true,
-                nav: false,
-                margin: 50,
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: false
-                    },
-                    736: {
-                        items: 1,
-                        nav: false
-                    }
-                }
-            })
-        })
-    </script>
-    <!-- //script for tesimonials carousel slider -->
 
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script>
