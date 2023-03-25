@@ -26,7 +26,7 @@
     <!-- <link rel="stylesheet" href="assests/css/font-awesome.min.css"> -->
     <!-- New toolbar-->
 
-    <!--header-->
+    <!--header-->`
     <header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg stroke px-0">
@@ -176,14 +176,13 @@
                                         <div class="input-field">
                                             <label for="sel3">Property Type</label>
                                             <select class="form-control" id="typeProperty" name="typeProperty" style="line-height: 1.0;">
-                                                <option>Investment Plots</option>               
-                                                <option>Residential Plots</option>               
+                                                <option>Individual plots</option>               
+                                                <option>Residential plots</option>               
                                                 <option>Commertial Plots</option>
-                                                <option>Independent Houses</option>
-                                                
+                                                <option>Houses</option>
+                                                <option>Apartments</option>
                                                 <option>Villas</option>
-                                                <option>Commercial Properties</option> 
-                                                <option>Apartments</option>              
+                                                <option>Commercial</option>               
                                             </select>
                                         </div>
 
@@ -191,16 +190,21 @@
                                             <label for="sel4" name="qualification">Price Range</label>
                                             <select class="form-control" id="minPrice" name="minPrice" style="line-height: 1.0;">
                                                 <option disabled selected>Minimum Price</option>               
-                                    
+                                                <option>5,00,000</option>               
+                                                <option>10,00,000</option>
                                                 <option>15,00,000</option>
                                                 <option>20,00,000</option>
                                                 <option>25,00,000</option>
                                                 <option>30,00,000</option>                             
-                                                <option>40,00,000</option>                             
                                             </select>
                                         
                                             <select class="form-control" id="maxPrice" name="maxPrice" style="line-height: 1.0; margin-top: 15px; ">
-                                                <option disabled selected>Minimum Price</option>
+                                                <option disabled selected>Maximum Price</option>               
+                                                <option>15,00,000</option>               
+                                                <option>20,00,000</option>
+                                                <option>25,00,000</option>
+                                                <option>30,00,000</option>
+                                                <option>35,00,000</option>
                                                 <option>40,00,000</option>
                                                 <option>50,00,000</option>
                                                 <option>60,00,000</option>
@@ -208,7 +212,7 @@
                                                 <option>80,00,000</option>
                                                 <option>90,00,000</option>
                                                 <option>100,00,000</option>
-                                                <option>1 Crore & Above</option>
+                                                <option>ABOVE 100,00,000</option>
                                             </select>
                                         </div>
                                         <!-- <div class="input-field">
@@ -362,18 +366,17 @@
                 var email = form.elements["Mail"].value;
                 var location = form.elements["Location"].value;
                 var propType = form.elements["typeProperty"].value;
-                var minPrice = form.element["minPrice"].value;
-                var maxPrice = form.element["maxPrice"].value;
-
+                var minPrice = form.elements["minPrice"].value;
+                var maxPrice = form.elements["maxPrice"].value;
                 console.log(name, phone, email, location)
-                url = "https://wa.me/917416644667?text=" + 
+                url = "https://wa.me/916284242142?text=" + 
                         "Name: "+name+"%0a"+
                         "PhoneNo.: " + phone + "%0a" + 
                         "E-Mail: " + email + "%0a" + 
                         "Location searching: " + location + "%0a"+
-                        "Property-type: " + propType;
-                        "Price-Range: " + minPrice + " - " + maxPrice;  e
-                        window.open(url, '_blank').focus();
+                        "Property-type: " + propType + "%0a" + 
+                        "Price-Range: " + minPrice + " - " + maxPrice;
+                window.open(url, '_blank').focus();
             }
     </script> 
 
